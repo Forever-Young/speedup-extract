@@ -6,7 +6,7 @@ DEFAULT_SPEEDUP=${DEFAULT_SPEEDUP:-+45}
 speedup=${1:-${DEFAULT_SPEEDUP}}
 echo "Using tempo change ${speedup}%"
 mkdir /tmp/result 2>/dev/null
-ln -s /tmp/result result 2>/dev/null
+ln -s /tmp/result 2>/dev/null
 
 trap interrupt INT
 

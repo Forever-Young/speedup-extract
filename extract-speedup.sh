@@ -31,7 +31,7 @@ fi
 echo "Using source directory ${original}"
 
 mkdir /tmp/result 2>/dev/null
-ln -s /tmp/result result 2>/dev/null
+ln -s /tmp/result 2>/dev/null
 
 count=`ls $original/*.mp4 2>/dev/null | wc -l`
 if [ ! $count -gt 0 ]; then
