@@ -33,14 +33,14 @@ echo "Using source directory ${original}"
 mkdir /tmp/result 2>/dev/null
 ln -s /tmp/result 2>/dev/null
 
-count=`ls $original/*.mp4 2>/dev/null | wc -l`
+count=`ls "$original/"*.mp4 2>/dev/null | wc -l`
 if [ ! $count -gt 0 ]; then
     echo "No input files"
     exit 0
 fi
 
 i=1
-for f in $original/*.mp4; do
+for f in "$original"/*.mp4; do
     name=`basename "$f" .mp4`
     if [ ! -f "result/$name.mp3" ]; then
 	printf "\E[32m%3.0f%%\E[0m Processing %s. \E[32mExtracting...\E[0m" "$(($i*100/$count))" "$name.mp4"
